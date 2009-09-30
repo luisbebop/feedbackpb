@@ -1,0 +1,11 @@
+%h1 Por favor, se identifique.
+- form_tag sessions_path do
+	%p Utilize sua conta de email da planobe.com.br para entrar no sistema de feedback.
+	%ul
+		%li
+			%label{:for=> "username"} Email da Plano Bê
+			= text_field_tag 'username'
+		%li
+			%label{:for=> "password"} Senha
+			= password_field_tag 'password'
+			= submit_tag 'Entrar'

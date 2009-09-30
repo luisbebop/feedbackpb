@@ -1,0 +1,6 @@
+%h1 Escolha algum membro da equipe para dar um feedback.
+%table
+	-@users.each do |user|
+		%tr
+			%td
+				= link_to user.username, user

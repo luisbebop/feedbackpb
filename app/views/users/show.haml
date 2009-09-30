@@ -1,0 +1,46 @@
+= flash[:notice]
+
+%h2 Página de feedback
+%h1="#{owner ? 'Você' : @user.username} recebeu #{pluralize @user.feedbacks.count, "feedback"} até agora!"
+
+%p O processo de feedback é muito importante para melhorar em termos de equipe
+-if owner
+	%p Visualize as ações que os outros membros da equipe estão dizendo para você começar, continuar ou parar de fazer.
+-else
+	%p Escreva um ação que a pessoa deve começar a praticar, uma que ela deve continuar e outra que ela deve parar.
+
+%table
+	%tr
+		%td
+			Continuar ...
+		%td
+			Começar ...
+		%td
+			Parar Com ...
+			- if owner
+				- @user.feedbacks.each do |feedback|
+					%tr
+						%td
+							=feedback.continue
+						%td
+							=feedback.start
+						%td
+							=feedback.stop
+			- else
+				-form_for @user do |user_form|
+					- user_form.fields_for :feedbacks do |feedback_form|
+						- if feedback_form.object.new_record?
+							%tr
+								%td
+									=feedback_form.text_area :continue
+								%td
+									=feedback_form.text_area :start
+								%td
+									=feedback_form.text_area :stop
+					%tr
+						= submit_tag "Dar feedback!"
+					%tr
+						= user_form.error_messages
+						
+
+
