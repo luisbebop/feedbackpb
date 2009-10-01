@@ -8,3 +8,5 @@
 ["luis", "danilo", "bruno", "thiago", "luiza", "eliezer", "jean", "gabriela"].each do |username|
   User.create(:username=> "#{username}@planobe.com.br")
 end
+
+User.create(:username=> "elson.net@gmail.com")

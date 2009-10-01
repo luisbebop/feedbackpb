@@ -8,6 +8,8 @@
 			#header
 				- if logged_in?
 					%p
+						= link_to 'Clique aqui para ver todos membros da equipe', root_url
+						|
 						Logado como 
 						= h current_user.username
 						= link_to 'Clique aqui para sair!', logout_url
