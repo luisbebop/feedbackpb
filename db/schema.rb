@@ -9,12 +9,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090929230608) do
+ActiveRecord::Schema.define(:version => 20091002133918) do
 
   create_table "feedbacks", :force => true do |t|
-    t.string   "start"
-    t.string   "continue"
-    t.string   "stop"
+    t.text     "start",      :limit => 2048
+    t.text     "continue",   :limit => 2048
+    t.text     "stop",       :limit => 2048
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
