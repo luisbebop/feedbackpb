@@ -12,9 +12,9 @@
 ActiveRecord::Schema.define(:version => 20091002154536) do
 
   create_table "feedbacks", :force => true do |t|
-    t.text     "start",      :limit => 255
-    t.text     "continue",   :limit => 255
-    t.text     "stop",       :limit => 255
+    t.text     "start"
+    t.text     "continue"
+    t.text     "stop"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
