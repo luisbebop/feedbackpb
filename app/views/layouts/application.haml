@@ -2,7 +2,7 @@
 %html{:xmlns => "http://www.w3.org/1999/xhtml", "xml:lang" => "en"}
 	%head
 		%title Feedback
-
+		= stylesheet_link_tag("default")
 	%body
 		#wrapper
 			#header
@@ -13,5 +13,5 @@
 						Logado como 
 						= h current_user.username
 						= link_to 'Clique aqui para sair!', logout_url
-		#content
-			= yield
+			#content
+				= yield

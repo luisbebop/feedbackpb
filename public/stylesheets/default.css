@@ -1,0 +1,54 @@
+body{
+	font-family: arial, Helvetica, sans-serif;
+}
+
+div#wrapper{
+	width: 100%;
+}
+
+div#content{
+	width: 960px;
+	margin: 0 auto;
+}
+
+div#login{
+	background-color: #ffffcc;
+	border: 1px solid #cccccc;
+	padding: 10px;
+	margin-bottom: 25px;
+}
+
+div#login h1, div#login p{
+	text-align: center;
+}
+
+div#login-form{
+	margin: 0 auto;
+	width: 500px;
+	height: 150px;
+	border: 10px solid #aaaaaa;
+	padding: 15px;
+}
+
+div#login-form input, div#login-form label{
+	float: left;
+	margin-bottom: 9px;
+}
+
+div#login-form label{
+	width: 140px;
+	text-align: right;
+	margin-right: 5px;
+}
+
+div#login-form input{
+	height: 18px;
+}
+
+div#login-form input#username{
+	width: 300px;
+}
+
+div#login-form p{
+	clear: both;
+}
