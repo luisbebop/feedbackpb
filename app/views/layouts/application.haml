@@ -2,16 +2,17 @@
 %html{:xmlns => "http://www.w3.org/1999/xhtml", "xml:lang" => "en"}
 	%head
 		%title Feedback
-
+		= stylesheet_link_tag("default")
 	%body
 		#wrapper
-			#header
-				- if logged_in?
-					%p
-						= link_to 'Clique aqui para ver todos membros da equipe', root_url
-						|
-						Logado como 
-						= h current_user.username
-						= link_to 'Clique aqui para sair!', logout_url
-		#content
-			= yield
+			- if logged_in?
+				#header
+					#header-inner
+						%p
+							= link_to 'Clique aqui para ver todos membros da equipe', root_url
+							%span
+								%small Logado como
+								%small= h current_user.username
+								%small= "(#{link_to("sair", logout_url)})"
+			#content
+				= yield
