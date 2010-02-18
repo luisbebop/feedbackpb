@@ -5,8 +5,6 @@
 #   
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Major.create(:name => 'Daley', :city => cities.first)
-["luis", "danilo", "bruno", "thiago", "luiza", "eliezer", "jean", "gabriela"].each do |username|
+["luis", "danilo", "bruno", "arthur", "luiza", "eliezer", "jean", "gabriela", "dennis"].each do |username|
   User.create(:username=> "#{username}@planobe.com.br")
 end
-
-User.create(:username=> "elson.net@gmail.com")
