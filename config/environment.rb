@@ -40,5 +40,5 @@ Rails::Initializer.run do |config|
   config.i18n.default_locale = "pt-BR"
   
   config.gem "googlebase", :lib => 'google/base', :version => '0.2.1'
-  config.gem 'haml', :version => '2.2.2'
+  config.gem 'haml', :version => '2.2.3'
 end
